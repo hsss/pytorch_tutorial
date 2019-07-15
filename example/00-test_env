@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "version": "0.3.2",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "accelerator": "GPU"
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/hsss/pytorch_tutorial/blob/master/example/00-test_env\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "FjEhhr2hPUys",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "f5a876f1-662f-4710-9e42-bdabc829530a"
+      },
+      "source": [
+        "import torch\n",
+        "\n",
+        "print(torch.cuda.is_available())\n"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "True\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Pl9WGHPvPtCQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 92
+        },
+        "outputId": "9277b52f-d524-4587-c71d-e8193d1363bb"
+      },
+      "source": [
+        "x = torch.rand(1, 3)\n",
+        "print(x.size())\n",
+        "\n",
+        "y = torch.rand(3, 1)\n",
+        "print(y.size())\n",
+        "\n",
+        "result = torch.mm(x, y)\n",
+        "print(result)\n",
+        "print(result.size())"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "torch.Size([1, 3])\n",
+            "torch.Size([3, 1])\n",
+            "tensor([[0.7064]])\n",
+            "torch.Size([1, 1])\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "KSvIvs2tQeuJ",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
